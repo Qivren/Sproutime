@@ -19,9 +19,9 @@
  */
 const SITE_CONFIG = {
   PLAY_STORE_URL: "",
-  CONTACT_EMAIL: "",
-  EFFECTIVE_DATE: "",
-  DEVELOPER_NAME: ""
+  CONTACT_EMAIL: "qivren89@gmail.com",
+  EFFECTIVE_DATE: "5 November 2026",
+  DEVELOPER_NAME: "Qivren"
 };
 
 (function () {

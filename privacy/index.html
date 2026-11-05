@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Sproutime</title>
-  <meta name="description" content="How Sproutime for Android handles your data: local-only storage, no account, no analytics, no ads, and Google Play Billing for optional purchases.">
+  <meta name="description" content="How Sproutime for Android handles your data: local-only focus storage, optional Google Play purchases, and an optional Firebase tester-code programme.">
   <meta name="theme-color" content="#faf7f0">
   <link rel="icon" type="image/svg+xml" href="../assets/img/icon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
@@ -15,9 +15,12 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Sproutime">
   <meta property="og:title" content="Privacy Policy — Sproutime">
-  <meta property="og:description" content="Sproutime keeps your focus history, garden, and notes on your device. No account, no analytics, no ads.">
-  <meta property="og:image" content="../assets/img/og-image.png">
+  <meta property="og:description" content="Sproutime keeps your focus history, garden, and notes on your device. Tester codes optionally use Firebase; no ads or analytics.">
+  <meta property="og:url" content="https://qivren.github.io/Sproutime/privacy/">
+  <meta property="og:image" content="https://qivren.github.io/Sproutime/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://qivren.github.io/Sproutime/assets/img/og-image.png">
+  <link rel="canonical" href="https://qivren.github.io/Sproutime/privacy/">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -62,8 +65,8 @@
         <a class="back-link" href="../"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>Back to Sproutime</a>
         <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Privacy</p>
         <h1>Privacy policy</h1>
-        <p class="page-lead">Sproutime is built to keep your focus life private. The app has no account, no analytics, and no cloud sync. This page explains exactly what stays on your device, the one place the app talks to the internet, and the choices you have.</p>
-        <p class="page-meta">Effective <span class="placeholder" data-effective-date>[effective date]</span> · Applies to Sproutime for Android (package <code>com.sproutime.app</code>) and this website.</p>
+        <p class="page-lead">Sproutime keeps your focus life private: your timer, history, garden, and notes stay on your device. This page explains that local data, the optional Google Play purchases, and the optional Firebase tester-code programme you can choose to use.</p>
+        <p class="page-meta">Effective <span data-effective-date>5 November 2026</span> · Applies to Sproutime for Android (package <code>com.sproutime.app</code>) and this website.</p>
       </div>
     </section>
 
@@ -76,6 +79,7 @@
           <a href="#stored">What is stored on your device</a>
           <a href="#not-collected">What is never collected</a>
           <a href="#network">Network connections and purchases</a>
+          <a href="#testers">Tester code programme</a>
           <a href="#permissions">Permissions</a>
           <a href="#sharing">Sharing and third parties</a>
           <a href="#retention">How long data is kept</a>
@@ -94,18 +98,19 @@
       <div class="prose">
         <div class="draft-note" role="note">
           <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
-          <div><strong>Before publishing:</strong> replace the highlighted developer name, address, contact email, and effective date. Confirm the target-audience wording and have the final policy reviewed for the countries where you distribute the app. This draft describes the app as built, but it is not legal advice.</div>
+          <div><strong>Legal note:</strong> This policy describes the app as built and is not legal advice. Have it reviewed for the countries where you distribute the app before relying on it.</div>
         </div>
 
         <section class="summary-box" aria-labelledby="summary">
           <h2 id="summary">The short version</h2>
-          <p>Sproutime is an offline-first Android app. Your timer settings, focus history, task labels, tags, notes, custom routines, challenge progress, garden, and Collection are stored only in the app's private storage on your device.</p>
-          <p>There is no Sproutime account, no server, no analytics, no advertising, no crash reporting, and no cloud backup. The app does not sell or share your focus data. Optional plans are bought through Google Play Billing; Google processes the payment and related purchase data under its own privacy policy.</p>
+          <p>Sproutime is an offline-first Android app. Your timer settings, focus history, task labels, tags, notes, custom routines, challenge progress, garden, and Collection are stored only in the app's private storage on your device. There is no Sproutime account for the core timer, and your focus data is not uploaded.</p>
+          <p>Optional plans are bought through Google Play Billing, and Google processes the payment and related purchase data. Separately, you can choose to redeem a 30-day tester code. That optional programme creates an anonymous Firebase account and stores a redemption record so the backend can enforce one redemption per person and a 30-day expiry. The core timer works without Firebase.</p>
+          <p>Sproutime has no advertising, no analytics, no crash reporting, and no cloud sync of your focus data.</p>
         </section>
 
         <h2 id="who">1. Who is responsible for your data</h2>
-        <p>Sproutime is published by <span class="placeholder" data-developer-name>[developer legal name]</span>, <span class="placeholder">[business address]</span>. For privacy questions, contact <a href="mailto:" data-contact-email class="placeholder">[contact email]</a>.</p>
-        <p>Because the app has no server and no account system, the developer does not receive the content you create in the app. The developer is responsible for the app itself, this website, and any purchase records Google Play makes available to developers.</p>
+        <p>Sproutime is published by <span data-developer-name>Qivren</span>. For privacy questions, contact <a href="mailto:qivren89@gmail.com" data-contact-email>qivren89@gmail.com</a>.</p>
+        <p>Because the core app has no server and no account system, the developer does not receive the focus content you create in the app. If you choose to redeem a tester code, the developer receives a Firebase anonymous identifier, a hashed code, and the redemption timestamp and expiry through Firebase. The developer is responsible for the app itself, this website, purchase records Google Play makes available, and those optional redemption records.</p>
 
         <h2 id="stored">2. What is stored on your device</h2>
         <p>All app data is kept in one private DataStore file named <code>focus_grove</code> inside the app's sandbox. Other apps cannot read it on a normal, non-rooted Android device. Android backup and device-to-device transfer are disabled for Sproutime, so this file is not copied to Google Drive or to a new phone automatically.</p>
@@ -133,19 +138,20 @@
         <h3>CSV export and import</h3>
         <p>If you choose <strong>Export history</strong>, Sproutime creates a CSV file and hands it to Android's system document picker, where you choose the destination. If you choose <strong>Import history</strong>, Android's picker lets you choose a file for the app to read. The app only reads the file you select. Once exported, the copy is outside Sproutime's private storage and is governed by where you saved it and any app that can access it.</p>
 
-        <h2 id="not-collected">3. What is never collected</h2>
+        <h2 id="not-collected">3. What the core timer never collects</h2>
+        <p>Using the timer, history, garden, Collection, routines, themes, and widgets does not require an account. For that core use, the app does not collect:</p>
         <ul>
-          <li>No name, email address, phone number, or account.</li>
-          <li>No advertising identifier, device fingerprint, or contact list.</li>
-          <li>No location, camera, microphone, photos, or health data.</li>
-          <li>No analytics events, session replays, crash reports, or telemetry.</li>
-          <li>No cloud sync, social feed, or public profile.</li>
-          <li>No sale or sharing of personal information, because there is none to sell or share.</li>
+          <li>Your name, email address, phone number, or a Sproutime account.</li>
+          <li>Your advertising identifier, device fingerprint, or contact list.</li>
+          <li>Your location, camera, microphone, photos, or health data.</li>
+          <li>Analytics events, session replays, crash reports, or telemetry.</li>
+          <li>Your focus history, task labels, tags, notes, or garden data.</li>
+          <li>Cloud sync, a social feed, or a public profile.</li>
         </ul>
-        <p>The app does not include advertising SDKs, analytics SDKs, Firebase, Crashlytics, or social login.</p>
+        <p>The only optional identity is the Firebase anonymous account created if you choose to redeem a tester code. It is not used for the timer and is described in section 5.</p>
 
         <h2 id="network">4. Network connections and purchases</h2>
-        <p>Sproutime requests the <code>INTERNET</code> permission solely so Google Play Billing can work. In the current build, the only network activity is the Play Billing library contacting Google Play when you open the Plans screen, start a purchase, or restore a previous purchase. The timer, history, garden, soundscapes, routines, and notes work without a connection and are not uploaded.</p>
+        <p>Sproutime requests the <code>INTERNET</code> permission for two optional features: Google Play Billing and the tester-code programme. In normal use, the only network activity is the Play Billing library contacting Google Play when you open the Plans screen, start a purchase, or restore a previous purchase. The timer, history, garden, soundscapes, routines, and notes work without a connection and are not uploaded.</p>
 
         <h3>What Google Play receives</h3>
         <p>When you buy or restore Plus or Grovekeeper, Google Play processes the transaction. Google may receive your Google account, payment method, device and store information, and the product you selected. The app receives the purchase result and entitlement information it needs to unlock features. Sproutime does not receive or store your card number, billing address, or other payment credentials.</p>
@@ -169,6 +175,17 @@
 
         <p>If you never open the Plans screen or make a purchase, the app does not need to contact Google Play. There are no background uploads, sync jobs, or push notification services.</p>
 
+        <h3 id="testers">Tester code programme</h3>
+        <p>If you choose to redeem a 30-day complimentary tester code, Sproutime uses Firebase, a Google service. This is optional: you can use the core timer and buy Plus without it. When you redeem a code, the app:</p>
+        <ul>
+          <li>Creates a Firebase <strong>anonymous account</strong> if you do not already have one. This produces a random user identifier; it does not ask for your name, email, or phone number.</li>
+          <li>Sends the code and the anonymous identifier to a Cloud Function. The code is normalised and hashed with a server-only secret before storage; the plaintext code is not stored in Firestore.</li>
+          <li>Uses Firebase App Check with Play Integrity to confirm the request comes from a genuine install of Sproutime.</li>
+        </ul>
+        <p>The backend stores a redemption record containing the anonymous identifier, the hashed code, the redemption time, and an expiry exactly 30 days later. It also keeps a short-lived rate-limit counter to discourage code guessing. The app receives only its own entitlement status and expiry date; it cannot read other users' records or write Firestore directly.</p>
+        <p>If you choose to link a Google account, Firebase Authentication stores the linked provider and identifier so you can recover the same anonymous identity after reinstalling. Linking is optional. The focus timer, history, garden, and notes are never sent to Firebase.</p>
+        <p>Firebase services used are Authentication, Cloud Functions, Cloud Firestore, and App Check. Google processes this data under its own terms and may process it in countries other than yours. See the <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer" target="_blank">Firebase privacy information</a> and the <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a>.</p>
+
         <h2 id="permissions">5. Permissions the app may request</h2>
         <p>Sproutime asks only for what a local timer needs. You can decline optional permissions and still use the core app.</p>
 
@@ -177,14 +194,14 @@
           <li><strong>Exact alarms (<code>SCHEDULE_EXACT_ALARM</code>).</strong> Used, when Android permits it, to deliver a completion alert at the right moment. If unavailable, the app falls back to an inexact alarm.</li>
           <li><strong>Start at boot (<code>RECEIVE_BOOT_COMPLETED</code>).</strong> Used only to restore notification and widget timing after your phone restarts. It does not start the app in the background for advertising or analytics.</li>
           <li><strong>Vibration (<code>VIBRATE</code>).</strong> Used only if you enable haptics.</li>
-          <li><strong>Internet (<code>INTERNET</code>).</strong> Used only by Google Play Billing, as described above.</li>
+          <li><strong>Internet (<code>INTERNET</code>).</strong> Used only by Google Play Billing and, if you choose it, the Firebase tester-code programme described above.</li>
         </ul>
 
         <p>Notification permission, exact-alarm access, and battery settings are controlled by Android. You can change them at any time in the app's Settings screen or in Android Settings. Widgets are optional home-screen components; removing a widget removes its updates.</p>
 
         <h2 id="sharing">6. Sharing and third parties</h2>
-        <p>Sproutime does not share app data with the developer, advertisers, data brokers, or any other third party. There is no server to share it with.</p>
-        <p>The only third-party service involved is Google Play Billing, for purchases. Google Play distributes the app and may collect information under its own policies when you download, install, review, or buy something. The developer may see aggregated sales, payout, and review information in Play Console, but not your payment credentials or your in-app focus history.</p>
+        <p>Sproutime does not share your focus data with the developer, advertisers, data brokers, or any other third party. Focus content stays on your device.</p>
+        <p>Two optional services involve Google. <strong>Google Play Billing</strong> processes purchases and may collect information under its own policies when you download, install, review, or buy something. <strong>Firebase</strong>, used only if you redeem a tester code or link a Google account, processes the anonymous identifier, hashed code, redemption and expiry timestamps, App Check attestation, and any linked Google account identifier. The developer can see redemption status through the Firebase console but not your focus content or payment credentials.</p>
         <p>The developer may disclose information if legally required and if it is actually in their possession. Because focus content is never transmitted, the developer cannot disclose it.</p>
         <p>This website links to Google Play and Google's policies. Following those links takes you to Google's services, which have their own privacy practices.</p>
 
@@ -194,6 +211,8 @@
           <li><strong>Focus history, garden, Collection, routines, and settings:</strong> kept locally until you use <em>Delete history</em> or uninstall Sproutime.</li>
           <li><strong>Exported CSV files:</strong> kept wherever you saved them until you delete them. Sproutime cannot delete or recall an exported file.</li>
           <li><strong>Purchase records:</strong> retained by Google according to Google's policies and by the developer only as required for tax, accounting, and legal obligations.</li>
+          <li><strong>Tester-code records:</strong> the anonymous identifier, hashed code, redemption time, and 30-day expiry are kept in Firestore for as long as needed to operate the programme and prevent duplicate redemption. Expired promotional access stops granting Plus automatically. You can ask support to delete the record.</li>
+          <li><strong>Rate-limit counters:</strong> short-lived records (about 10 minutes) used to discourage code guessing.</li>
           <li><strong>Support correspondence:</strong> if you email support, the developer keeps the message only as long as needed to answer and meet legal obligations.</li>
         </ul>
 
@@ -212,29 +231,34 @@
         <h3>Purchases</h3>
         <p>Deleting app data does not cancel a subscription or refund a purchase. Manage or cancel Plus in Google Play → Payments &amp; subscriptions. Grovekeeper is a one-time purchase and can be restored with the same Google account after reinstalling.</p>
 
+        <h3>Tester-code records</h3>
+        <p>Uninstalling the app clears the local copy of the promotional expiry, but the backend redemption record remains tied to the anonymous Firebase identifier so the one-redemption-per-person rule still holds. To delete that record, contact <a href="mailto:qivren89@gmail.com" data-contact-email>qivren89@gmail.com</a> with your code or the approximate redemption date. Deleting the record does not extend or restore access.</p>
+
         <h2 id="choices">9. Your choices and rights</h2>
         <p>You can:</p>
         <ul>
-          <li>Use the app without creating an account or providing any identity information.</li>
+          <li>Use the core timer without creating an account or providing any identity information.</li>
+          <li>Choose whether to redeem a tester code; that optional step creates a Firebase anonymous account.</li>
           <li>Keep or decline notification, exact-alarm, haptic, and widget permissions.</li>
           <li>Export your history in a portable CSV format at any time.</li>
           <li>Delete history or uninstall the app to remove local data.</li>
-          <li>Contact support to ask a privacy question or request help with data that the developer may hold (for example, a support email).</li>
+          <li>Contact support to ask a privacy question, delete a tester-code record, or request help with data that the developer may hold.</li>
         </ul>
-        <p>Depending on where you live, you may have legal rights to access, correct, export, delete, restrict, or object to the processing of personal data. Because Sproutime does not transmit your app data, most of these rights are exercised directly on your device using the tools above. For any request, contact <a href="mailto:" data-contact-email class="placeholder">[contact email]</a>. You may also have the right to complain to your local data protection authority.</p>
+        <p>Depending on where you live, you may have legal rights to access, correct, export, delete, restrict, or object to the processing of personal data. For local app data, use the in-app tools above. For Firebase tester-code data, contact <a href="mailto:qivren89@gmail.com" data-contact-email>qivren89@gmail.com</a>. You may also have the right to complain to your local data protection authority.</p>
         <p>The app does not make automated decisions with legal or similarly significant effects, and it does not profile you for advertising.</p>
 
         <h2 id="children">10. Children</h2>
-        <p>Sproutime is a general-audience productivity app and is not directed to children under 13 (or the minimum age required in your country). The app does not ask for a name, email address, birth date, or any other personal information, and it does not transmit focus content. Because there is no account or server, the developer does not knowingly collect personal information from children.</p>
-        <p>If you believe a child has sent personal information to support, contact <a href="mailto:" data-contact-email class="placeholder">[contact email]</a> and it will be deleted. Parents and guardians can also delete all local app data by uninstalling the app.</p>
+        <p>Sproutime is a general-audience productivity app intended for a broad audience, including adults and teenagers. It is not a child-focused app. The core app does not ask for a name, email address, birth date, or any other personal information, and it does not transmit focus content. A tester code can be redeemed without an email, but it does create an anonymous Firebase identifier. The developer does not knowingly collect personal information from children.</p>
+        <p>If you believe a child has redeemed a tester code or sent personal information to support, contact <a href="mailto:qivren89@gmail.com" data-contact-email>qivren89@gmail.com</a> and it will be deleted. Parents and guardians can also delete all local app data by uninstalling the app.</p>
 
         <h2 id="security">11. Security</h2>
-        <p>Sproutime relies on Android's app sandbox to keep its DataStore file private. Android backup and device transfer are disabled for the app. The app contains no server, so there is no online account database to breach.</p>
+        <p>Sproutime relies on Android's app sandbox to keep its DataStore file private. Android backup and device transfer are disabled for the app. The core app has no server, so there is no online database of focus content to breach.</p>
+        <p>The optional tester programme uses Firebase Authentication, App Check, Cloud Functions, and Firestore. Redemption is validated on the server, codes are stored only as salted hashes, clients cannot write Firestore directly, and App Check must pass before a redemption is accepted. Server credentials are never included in the Android app.</p>
         <p>Your device's lock screen and encryption protect local storage. Keep your device updated and use a screen lock. No method of storage is completely secure, and a rooted or compromised device can expose app data.</p>
         <p>Exported CSV files are not encrypted by Sproutime. Store them somewhere you trust, and delete them when you no longer need them.</p>
 
         <h2 id="transfers">12. International transfers</h2>
-        <p>Sproutime does not transfer your app data internationally because it does not transmit it. Google Play may process purchase and store data in countries other than yours under Google's own safeguards and policies. If you email support, your message travels through your email provider and may be processed where the developer or their email provider operates.</p>
+        <p>Your focus data is not transferred internationally because it is not transmitted. Google Play may process purchase and store data in countries other than yours under Google's own safeguards. If you redeem a tester code or link a Google account, Firebase may process the anonymous identifier, redemption record, and App Check attestation in Google data centres outside your country, under Google's terms. If you email support, your message travels through your email provider and may be processed where the developer or their email provider operates.</p>
 
         <h2 id="website">13. This website</h2>
         <p>This website is plain HTML, CSS, and a small local script. It does not set cookies, use analytics, embed third-party fonts, or load tracking pixels. The fonts are self-hosted. Server logs from your hosting provider may record standard request information such as IP address, browser, and requested page for security and operation; that is controlled by the hosting provider.</p>
@@ -242,19 +266,18 @@
 
         <h2 id="changes">14. Changes to this policy</h2>
         <p>This policy may change when the app changes, for example if a future version adds a genuinely new feature that affects data. The effective date at the top will be updated, and material changes will be described on this page or in the app before they take effect.</p>
-        <p>If a future version ever adds cloud sync, accounts, analytics, or a new third-party service, this policy will be updated before that feature is enabled. The current version describes an app with no such features.</p>
+        <p>This version describes local focus storage, Google Play Billing, and the optional Firebase tester-code programme. If a future version adds cloud sync of focus data, analytics, or a new third-party service, this policy will be updated before that feature is enabled.</p>
 
         <h2 id="contact">15. Contact</h2>
         <p>Questions, privacy requests, or concerns about Sproutime:</p>
         <ul>
-          <li><strong>Developer:</strong> <span class="placeholder" data-developer-name>[developer legal name]</span></li>
-          <li><strong>Address:</strong> <span class="placeholder">[business address]</span></li>
-          <li><strong>Email:</strong> <a href="mailto:" data-contact-email class="placeholder">[contact email]</a></li>
+          <li><strong>Developer:</strong> <span data-developer-name>Qivren</span></li>
+          <li><strong>Email:</strong> <a href="mailto:qivren89@gmail.com" data-contact-email>qivren89@gmail.com</a></li>
           <li><strong>Support:</strong> <a href="../support/">Sproutime support</a></li>
         </ul>
         <p>Please include the app version and your Android version if your question is about the app. Do not send screenshots containing notes or tags you want to keep private.</p>
 
-        <p class="policy-foot">This policy applies to Sproutime for Android, package <code>com.sproutime.app</code>, and to this information website. Effective <span class="placeholder" data-effective-date>[effective date]</span>. Last reviewed <span class="placeholder" data-effective-date>[effective date]</span>.</p>
+        <p class="policy-foot">This policy applies to Sproutime for Android, package <code>com.sproutime.app</code>, and to this information website. Effective <span data-effective-date>5 November 2026</span>. Last reviewed <span data-effective-date>5 November 2026</span>.</p>
       </div>
     </div>
   </main>
@@ -290,11 +313,11 @@
         <div class="footer-col footer-note">
           <h2>About this site</h2>
           <p>This is the official information site for Sproutime. It uses no cookies, analytics, or third-party scripts. The app is not yet available on Google Play.</p>
-          <p style="margin-top:10px">Brand and interface © <span data-year>2026</span> Sproutime. Google Play is a trademark of Google LLC.</p>
+          <p style="margin-top:10px">Brand and interface © <span data-year>2026</span> Qivren. Google Play is a trademark of Google LLC.</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span data-year>2026</span> Sproutime. All rights reserved. <a href="./">Privacy</a> · <a href="../support/">Support</a></p>
+        <p>© <span data-year>2026</span> Qivren. All rights reserved. <a href="./">Privacy</a> · <a href="../support/">Support</a></p>
         <a class="to-top" href="#main">Back to top <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
       </div>
     </div>

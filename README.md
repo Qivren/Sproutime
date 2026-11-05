@@ -57,12 +57,12 @@ sproutime-website/
 
 Open `assets/js/main.js` and fill in the `SITE_CONFIG` block at the top.
 
-| Value | What to enter | What happens if it stays empty |
+| Value | Current value | What happens if it stays empty |
 | --- | --- | --- |
-| `PLAY_STORE_URL` | Full Google Play listing URL, e.g. `https://play.google.com/store/apps/details?id=com.sproutime.app` | The button stays an honest “coming soon” note. No fake store link is shown. |
-| `CONTACT_EMAIL` | A monitored public support address, e.g. `hello@sproutime.app` | The site shows highlighted `[contact email]` placeholders. |
-| `EFFECTIVE_DATE` | The privacy policy's effective date, e.g. `4 November 2026` | The policy shows highlighted `[effective date]` placeholders. |
-| `DEVELOPER_NAME` | The developer or legal entity name used in Play Console | The policy shows highlighted `[developer legal name]` placeholders. |
+| `PLAY_STORE_URL` | *not published* | The button stays an honest “coming soon” note. No fake store link is shown. |
+| `CONTACT_EMAIL` | `qivren89@gmail.com` | The site shows highlighted `[contact email]` placeholders. |
+| `EFFECTIVE_DATE` | `5 November 2026` | The policy shows highlighted `[effective date]` placeholders. |
+| `DEVELOPER_NAME` | `Qivren` | The policy shows highlighted `[developer legal name]` placeholders. |
 
 These values are plain strings in one file; there is nothing to rebuild. After editing, reload the
 page. The highlighted yellow markers disappear as each value is supplied.
@@ -71,19 +71,23 @@ page. The highlighted yellow markers disappear as each value is supplied.
 
 These cannot be invented and must be supplied by the app owner:
 
-- [ ] **Developer legal name** — the person or company that publishes the app.
-- [ ] **Business address** — a contact address suitable for a public privacy policy.
-- [ ] **Contact email** — public, monitored, and the same address declared in Play Console.
-- [ ] **Effective date** — the date the policy goes live.
-- [ ] **Target audience / age rating** — confirm the app is general-audience and not directed to
-      children under 13. The policy states this as the current position.
-- [ ] **Jurisdiction review** — have the final policy checked for the countries where you distribute
-      the app. The page is a careful draft, not legal advice.
-- [ ] **Data Safety form** — answer “no data collected / no data shared” for app content, with Google
-      Play Billing handled as the purchase processor. Confirm this against the final build.
+- [x] **Developer legal name** — Qivren.
+- [ ] **Business address** — not supplied. The policy currently uses email contact only; add a
+      registered or public business address if your jurisdiction or Play Console requires one.
+- [x] **Contact email** — qivren89@gmail.com (public, monitored, and the same address you should
+      declare in Play Console).
+- [x] **Effective date** — 5 November 2026.
+- [ ] **Target audience / age rating** — supplied as “all”; confirm the Play Console age rating and
+      whether child-directed rules apply in your markets. The policy now says “general-audience,
+      including adults and teenagers; not child-focused”.
+- [ ] **Jurisdiction review** — not confirmed. Have the final policy checked for the countries where
+      you distribute. The page is a careful draft, not legal advice.
+- [ ] **Data Safety form** — declare Google Play Billing as the purchase processor and Firebase as
+      the optional tester-code processor; no focus/timer/history/garden data is collected. Confirm
+      against the final build.
 - [ ] **Google Play URL** — use the real listing URL after the app is published.
-- [ ] **Domain** — replace `https://example.com` in `sitemap.xml` and `robots.txt`, and add a
-      canonical link plus `og:url` to each page once the domain is known.
+- [x] **Domain** — `https://qivren.github.io/Sproutime/`. `sitemap.xml`, `robots.txt`, canonical
+      links, and `og:url` are already set.
 
 Search the project for `[` to find every visible placeholder:
 
@@ -96,7 +100,7 @@ Select-String -Path .\index.html,.\privacy\index.html,.\support\index.html -Patt
 For the **Store listing → Privacy policy** field, use:
 
 ```text
-https://YOUR-DOMAIN/privacy/
+https://qivren.github.io/Sproutime/privacy/
 ```
 
 The page currently covers, accurately for the built app:
@@ -118,22 +122,22 @@ for your target markets.
 
 These steps assume you want the site at a public URL without a custom domain.
 
-1. Create a new **public** GitHub repository, for example `sproutime-site`.
+1. The public repository is `qivren/Sproutime`.
 2. Upload the **contents of this folder** — not the parent project and not the Android app.
    Keep the folder structure exactly as it is (`privacy/index.html`, `assets/...`, and so on).
 3. Commit to the `main` branch.
 4. In the repository, open **Settings → Pages**.
 5. Under **Build and deployment**, choose **Deploy from a branch**.
 6. Select branch **main** and folder **/ (root)**, then **Save**.
-7. Wait for the deployment to finish. The URL will look like
-   `https://USERNAME.github.io/sproutime-site/`.
+7. Wait for the deployment to finish. The URL is
+   `https://qivren.github.io/Sproutime/`.
 8. Open the URL and check the home page, `/privacy/`, `/support/`, a screenshot, and the 404 page.
-9. Update `robots.txt` and `sitemap.xml` with the real URL, and add canonical/`og:url` tags.
+9. `robots.txt`, `sitemap.xml`, canonical, and `og:url` are already set to this URL.
 10. Optionally add a custom domain under **Settings → Pages → Custom domain** and enable
     **Enforce HTTPS** once DNS is ready.
 
 Because every link in the site is relative, it works both at a domain root and in a project
-subdirectory such as `/sproutime-site/`.
+subdirectory such as `/Sproutime/`.
 
 ### Using the command line instead
 
@@ -144,7 +148,7 @@ git init
 git add .
 git commit -m "Add Sproutime website"
 git branch -M main
-git remote add origin https://github.com/USERNAME/sproutime-site.git
+git remote add origin https://github.com/qivren/Sproutime.git
 git push -u origin main
 ```
 
@@ -193,9 +197,12 @@ subpage), set a unique `<title>` and description, and add the page to `sitemap.x
 
 - The app is **not yet on Google Play**. The site does not claim it is, and it contains no invented
   store URL.
-- Plans are described with the prices currently defined in the app, clearly marked as planned and
-  confirmed in Google Play at checkout.
-- No deployment or publishing has been performed.
-- The privacy policy is complete in structure and accurate to the app's implementation, but still
-  needs the legal identity, contact email, effective date, domain, and jurisdiction review listed
-  above.
+- Plans are described with the prices returned by Google Play Billing at runtime. When Play is
+  unavailable, the app shows neutral “See price in Google Play” wording instead of a hardcoded price.
+- The intended site URL is `https://qivren.github.io/Sproutime/`. This workspace has not pushed or
+  deployed anything; publishing is done by the repository owner.
+- The privacy policy now has the developer identity, contact email, effective date, and domain. It
+  still needs a business address if required in your jurisdiction, plus a legal review for the
+  countries where you distribute.
+- The Firebase tester-code backend is implemented but **not configured or deployed**. Redemption
+  stays disabled until `google-services.json`, the Functions, and App Check are set up.

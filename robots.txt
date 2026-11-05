@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace https://example.com with the live domain before publishing.
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://qivren.github.io/Sproutime/sitemap.xml

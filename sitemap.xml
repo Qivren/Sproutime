@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Replace every https://example.com with the live domain before publishing,
-  then submit this sitemap in Google Search Console.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <loc>https://qivren.github.io/Sproutime/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/privacy/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <loc>https://qivren.github.io/Sproutime/privacy/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://example.com/support/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <loc>https://qivren.github.io/Sproutime/support/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
