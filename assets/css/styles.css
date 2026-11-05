@@ -2189,7 +2189,7 @@ button {
   scroll-margin-top: 100px;
 }
 
-.prose h2:first-of-type {
+.prose > h2:first-child {
   margin-top: 0;
   padding-top: 0;
   border-top: 0;
