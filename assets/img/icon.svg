@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-labelledby="sproutimeIconTitle">
+  <title id="sproutimeIconTitle">Sproutime app icon: a seedling growing inside a focus ring</title>
+  <defs>
+    <linearGradient id="sproutimeBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B5C3C"/>
+      <stop offset="1" stop-color="#0B2A1D"/>
+    </linearGradient>
+    <radialGradient id="sproutimeGlow" cx="30%" cy="18%" r="85%">
+      <stop offset="0" stop-color="#3A8A5D" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#0B2A1D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="108" height="108" rx="24" fill="url(#sproutimeBg)"/>
+  <rect width="108" height="108" rx="24" fill="url(#sproutimeGlow)"/>
+  <rect x=".75" y=".75" width="106.5" height="106.5" rx="23.25" fill="none" stroke="#FFFFFF" stroke-opacity=".1" stroke-width="1.5"/>
+  <path d="M54,25.5 C69.74,25.5 82.5,38.26 82.5,54 C82.5,69.74 69.74,82.5 54,82.5 C38.26,82.5 25.5,69.74 25.5,54 C25.5,38.26 38.26,25.5 54,25.5 Z" fill="none" stroke="#9FD3AE" stroke-linecap="round" stroke-width="2.6"/>
+  <path d="M54,69 L54,46.5" fill="none" stroke="#F6F1E7" stroke-linecap="round" stroke-width="4.2"/>
+  <path d="M53.8,55.2 C45.2,55.2 39.4,49.8 38.2,42.5 C46.7,42.5 52.5,47.9 53.8,55.2 Z" fill="#F6F1E7"/>
+  <path d="M54.2,51.6 C61.8,46.3 69.6,47.5 74.2,52.8 C67.2,59.1 58.8,57.9 54.2,51.6 Z" fill="#6FC98C"/>
+  <path d="M54,78.5 C50.4,78.5 48,75.9 48,72.5 C48,69.3 50.7,67 54,67 C57.3,67 60,69.3 60,72.5 C60,75.9 57.6,78.5 54,78.5 Z" fill="#E5B35A"/>
+  <path d="M51.2,70.4 C52.2,69.2 54.4,68.8 55.9,69.5 C55.1,70.7 53.1,71.2 51.2,70.4 Z" fill="#F5D18A"/>
+</svg>
